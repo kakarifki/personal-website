@@ -14,7 +14,7 @@ Website ini terbagi menjadi 5 bagian
 ## Header
 Pada bagian ini terdapat nama Rifki septiawan serta menu navigation bar yaitu About, Experience, Project, dan Contact
 ### Contact
-Bagian ini jika diklik akan mengirimkan email ke email rifki yaitu `rifkim91@gmai.com`
+Bagian ini jika diklik akan mengirimkan email ke email rifki yaitu `rifkim91@gmail.com`
 
 ## About
 
