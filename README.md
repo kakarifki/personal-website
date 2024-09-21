@@ -17,7 +17,7 @@ There's navigation bar for navigating trough website; Home, About, Experience, P
 ## Home
 Hi, My name is Rifki a passionate Software Engineer  
 Ready to Build and Innovate!  
-![Rifki's Photo](image.jpg)
+![Rifki's Photo](https://github.com/kakarifki/personal-website/blob/master/images/profile_photo.JPG)
 
 Connect with me
 - [LinkedIn](https://www.linkedin.com/in/muhammadrifkiseptiawan11/)
