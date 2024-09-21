@@ -1,10 +1,9 @@
 # Rifki Septiawan Personal Website
 The website can be accessed with this [link](https://personal-website-rifki.vercel.app/)  
 This is Rifki Septiawan Personal Website Readme.md  
-Rifki's persoal website will be h  
-Website ini memuat data diri Rifki, portofolio, serta pengalaman project yang pernah dilakukan
+This website contains Rifki's personal data, portfolio, and project experience that he has been done.
 
-Website ini terbagi menjadi 5 bagian
+This website is divided into 6 sections
 1. Header
 2. Home
 3. About
@@ -13,7 +12,7 @@ Website ini terbagi menjadi 5 bagian
 6. Footer
 
 ## Header
-Pada bagian ini terdapat nama Rifki septiawan serta menu navigation bar yaitu Home, About, Experience, Project, dan Contact
+There's navigation bar for navigating trough website; Home, About, Experience, Project, dan Contact
 
 ## Home
 Hi, My name is Rifki a passionate Software Engineer  
@@ -25,6 +24,12 @@ Connect with me
 - [Instagram](https://www.instagram.com/rifkiseptiawan)
 - [Email](mailto:rifkim91@gmail.com)
 
+## About
+I am Rifki, a Bachelor of Management graduate, currently living in Bekasi. My journey into the world of technology began at a young age. Since middle school, I've had a fascination with computers, starting from simple tasks like installing software to eventually taking apart hardware just to see how it all worked. This curiosity led me to pursue a career in software engineering.
+
+To turn my passion into a profession, I enrolled in a bootcamp at Bermentor.com, where I gained hands-on experience in software development, guided by expert mentors. This structured learning environment helped me solidify my skills and gain the confidence needed to tackle real-world coding challenges.
+
+My goal is to become a reliable, committed programmer who continuously evolves in this ever-changing field. I believe that learning never stops, and I strive to be someone who not only adapts to new technologies but also contributes to building innovative solutions.
 
 ## Experience
 ### PT Prawita Karya - IT Support
