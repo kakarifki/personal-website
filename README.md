@@ -26,7 +26,7 @@ Connect with me
 - [Email](mailto:rifkim91@gmail.com)
 
 ## About
-I am Rifki, a Bachelor of Management graduate, currently living in Bekasi. My journey into the world of technology began at a young age. Since middle school, I've had a fascination with computers, starting from simple tasks like installing software to eventually taking apart hardware just to see how it all worked. This curiosity led me to pursue a career in software engineering.
+I am Rifki, a Bachelor of Management, currently living in Bekasi. My journey into the world of technology began at a young age. Since middle school, I've had a fascination with computers, starting from simple tasks like installing software to eventually taking apart hardware just to see how it all worked. This curiosity led me to pursue a career in software engineering.
 
 To turn my passion into a profession, I enrolled in a bootcamp at Bermentor.com, where I gained hands-on experience in software development, guided by expert mentors. This structured learning environment helped me solidify my skills and gain the confidence needed to tackle real-world coding challenges.
 
