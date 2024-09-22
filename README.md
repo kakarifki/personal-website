@@ -15,9 +15,10 @@ This website is divided into 6 sections
 There's navigation bar for navigating trough website; Home, About, Experience, Project, dan Contact
 
 ## Home
-Hi, My name is Rifki a passionate Software Engineer  
+#### Hi, My name is Rifki 
+A passionate Software Engineer  
 Ready to Build and Innovate!  
-![Rifki's Photo](image.jpg)
+![Rifki's Photo](/images/profile_photo.JPG)
 
 Connect with me
 - [LinkedIn](https://www.linkedin.com/in/muhammadrifkiseptiawan11/)
