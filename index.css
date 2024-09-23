@@ -125,3 +125,23 @@ body {
   justify-content: space-around;
   flex-direction: column;
 }
+.about h1 {
+  text-align: center;
+}
+
+.experience {
+  padding: 80px;
+  /* background-color: black; */
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.exp-title {
+  text-align: center;
+}
+
+.exp-content ul {
+  padding: 0px;
+  /* background-color: black; */
+}
