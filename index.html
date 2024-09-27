@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                fontFamily: {
+                    league: ["League Spartan", "sans-serif"],
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    }
+      </script>
     <title>Rifki Septiawan</title>
 </head>
-<body class="max-w-5xl mx-auto bg-teal-950 text-white" >
-    <!-- <h1 class="text-3xl font-bold underline bg-red-600">
-        Hello world!
-      </h1> -->
+<body class="max-w-5xl mx-auto bg-teal-950 text-white font-league" >
     <section class="bg-teal-600">
         <div class="bg-teal-300 rounded-2xl px-8 flex justify-between mx-36 Header">
             <h1>
-                <a href="">Rifki Septiawan</a>
+                <a href="" class="text-3xl">Rifki Septiawan</a>
             </h1>
             <nav class="flex justify-between gap-4">
                 <a href="">Home</a>
@@ -23,8 +37,9 @@
                 <a href="mailto:rifkim91@gmail.com">Contact</a>
             </nav>
         </div>
-        <div class="my-40 justify-center flex">
-            <div class="flex-col lg:space-y-24 items-center">
+        <div class="my-40 pb-16 flex-col items-center">
+            <div class="justify-center flex gap-20">
+            <div class="flex-col lg:space-y-24 place-content-around">
                 <div class="text-center">
                 <p>Hi, I'm Rifki, <br> A Passionate</p>
                 <p class="text-3xl">Software Engineer</p>
@@ -32,7 +47,7 @@
                 </div>
                 <div>
                 <button class="bg-teal-400 py-2 px-4" >
-                    <a href="www.linkedin.com">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/muhammadrifkiseptiawan11/">LinkedIn</a>
                 </button>
                 <button class="bg-teal-400 py-2 px-4" >
                     <a href="www.instagram.com/rifkiseptiawan">Instagram</a>
@@ -42,11 +57,18 @@
                 </button>
                 </div>
             </div>
-            <img src="/images/profile_photo.JPG" alt="Rifki's Photo" class="max-h-96 max-w-xs">
+                <img src="/images/profile_photo.JPG" alt="Rifki's Photo" class="max-h-96 max-w-xs">
+            </div>
+            <div class="flex justify-center my-8">
+                <img src="/images/HTML5_logo.svg" alt="HTML5" class="w-20 h-20 object-contain">
+                <img src="/images/CSS3_logo.svg" alt="CSS" class="w-20 h-20 object-contain">
+                <img src="/images/Tailwind_CSS_Logo.svg" alt="Tailwind CSS" class="w-20 h-20 object-contain">
+            </div>
         </div>
-        <!-- <div class="flex-col space-y-4">
-            <div class="bg-blue-500 p-4">Div 1</div>
-            <div class="bg-red-500 p-4">Div 2</div>
+        <!-- <div class="flex space-x-4">
+            <img src="/images/CSS3.svg" class="w-20 h-20 object-contain" alt="Image 1">
+            <img src="/images/HTML5.svg" class="w-32 h-32 object-cover" alt="Image 2">
+            <img src="/images/Tailwind_CSS_Logo.svg" class="w-32 h-32 object-contain" alt="Image 3">
           </div> -->
     </section>
 </body>
