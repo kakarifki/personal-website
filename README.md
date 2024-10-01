@@ -1,5 +1,5 @@
 # Rifki Septiawan Personal Website
-The website can be accessed with this [link](https://personal-website-rifki.vercel.app/)  
+The website can be accessed with this link [Rifki Septiawan Personal Website](https://www.rifkiseptiawan.com/)  
 This is Rifki Septiawan Personal Website Readme.md  
 This website contains Rifki's personal data, portfolio, and project experience that he has been done.
 
@@ -18,7 +18,7 @@ There's navigation bar for navigating trough website; Home, About, Experience, P
 #### Hi, My name is Rifki 
 A passionate Software Engineer  
 Ready to Build and Innovate!  
-![Rifki's Photo](https://github.com/kakarifki/personal-website/blob/master/images/profile_photo.JPG)
+<img src="https://github.com/kakarifki/personal-website/blob/master/images/profile_photo.JPG" width="250">
 
 Connect with me
 - [LinkedIn](https://www.linkedin.com/in/muhammadrifkiseptiawan11/)
