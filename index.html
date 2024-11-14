@@ -26,18 +26,24 @@
 </head>
 <body class="max-w-5xl mx-auto bg-teal-950 text-white font-league" >
     <section id="home" class="bg-teal-600 mb-8 rounded-lg">
-        <div class="bg-teal-300 rounded-2xl px-8 md:flex md:flex-row justify-between md:mx-36">
-            <h1 class="text-3xl font-extrabold py-2 flex justify-center">
-                <a href="https://www.rifkiseptiawan.com">Rifki Septiawan</a>
-            </h1>
-            <nav class="md:flex flex justify-between gap-4 items-center">
-                <a href="#home" class="">Home</a>
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#project">Project</a>
-                <a href="mailto:rifkim91@gmail.com">Contact</a>
-            </nav>
-        </div>
+        <header class="bg-gray-800 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Kondisional untuk nama atau logo -->
+                <div class="flex items-center">
+                    <span id="logo-name" class="text-2xl font-bold">Rifki Septiawan</span>
+                    <!-- Jika ingin mengganti dengan logo, tambahkan tag <img> dan sembunyikan teks dengan JavaScript atau CSS -->
+                    <!-- <img id="logo-image" src="path/to/logo.png" alt="Logo" class="hidden"> -->
+                </div>
+                <!-- Navigasi -->
+                <nav class="space-x-4">
+                    <a href="#home" class="hover:text-gray-400">Home</a>
+                    <a href="#about" class="hover:text-gray-400">About</a>
+                    <a href="#experience" class="hover:text-gray-400">Experience</a>
+                    <a href="#projects" class="hover:text-gray-400">Projects</a>
+                    <a href="#contact" class="hover:text-gray-400">Contact</a>
+                </nav>
+            </div>
+        </header>
         <div class="mt-28 pb-8 flex flex-col items-center">
             <div class="md:flex md:flex-col content-center">
                 <div class="flex flex-col md:flex-row md:space-x-6 place-items-center ">
