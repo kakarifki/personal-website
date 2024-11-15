@@ -6,7 +6,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./index.css" rel="stylesheet">
     <script>
         tailwind.config = {
           theme: {
@@ -24,54 +26,51 @@
     <title>Rifki Septiawan</title>
     <meta name="description" content="Rifki Septiawan Personal Website">
 </head>
-<body class="max-w-5xl mx-auto bg-teal-950 text-white font-league" >
-    <section id="home" class="bg-teal-600 mb-8 rounded-lg">
-        <header class="bg-gray-800 text-white p-4">
-            <div class="container mx-auto flex justify-between items-center">
-                <!-- Kondisional untuk nama atau logo -->
-                <div class="flex items-center">
-                    <span id="logo-name" class="text-2xl font-bold">Rifki Septiawan</span>
-                    <!-- Jika ingin mengganti dengan logo, tambahkan tag <img> dan sembunyikan teks dengan JavaScript atau CSS -->
-                    <!-- <img id="logo-image" src="path/to/logo.png" alt="Logo" class="hidden"> -->
-                </div>
-                <!-- Navigasi -->
-                <nav class="space-x-4">
-                    <a href="#home" class="hover:text-gray-400">Home</a>
-                    <a href="#about" class="hover:text-gray-400">About</a>
-                    <a href="#experience" class="hover:text-gray-400">Experience</a>
-                    <a href="#projects" class="hover:text-gray-400">Projects</a>
-                    <a href="#contact" class="hover:text-gray-400">Contact</a>
-                </nav>
+<body class="" >
+    <header class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Kondisional untuk nama atau logo -->
+            <div class="flex items-center">
+                <span id="logo-name" class="text-2xl font-bold">Rifki Septiawan</span>
+                <!-- Jika ingin mengganti dengan logo, tambahkan tag <img> dan sembunyikan teks dengan JavaScript atau CSS -->
+                <!-- <img id="logo-image" src="path/to/logo.png" alt="Logo" class="hidden"> -->
             </div>
-        </header>
-        <div class="mt-28 pb-8 flex flex-col items-center">
-            <div class="md:flex md:flex-col content-center">
-                <div class="flex flex-col md:flex-row md:space-x-6 place-items-center ">
-                    <div class="flex-col space-y-6 md:space-y-24 place-content-around">
-                        <div class="text-center">
-                            <p class="text-2xl">Hi, I'm Rifki, <br> A Passionate</p>
-                            <p class="text-5xl font-semibold">Software Engineer</p>
-                            <p class="text-2xl">Ready to Build and Innovate!</p>
-                        </div>
-                        <div class="flex justify-center gap-x-4">
-                            <button class="bg-teal-400 py-2 px-6" >
-                                <a href="https://www.linkedin.com/in/muhammadrifkiseptiawan11/">LinkedIn</a>
-                            </button>
-                            <button class="bg-teal-400 py-2 px-6" >
-                                <a href="https://www.instagram.com/rifkiseptiawan">Instagram</a>
-                            </button>
-                            <button class="bg-teal-400 py-2 px-6" >
-                                <a href="mailto:rifkim91@gmail.com">Email</a>
-                            </button>
-                        </div>
-                    </div>
-                    <img src="/images/profile_photo.JPG" alt="Rifki's Photo" class="max-h-96 max-w-xs my-8 rounded-xl shadow-2xl">
-                </div>
-            <div class="flex justify-center my-8 py-2 ring-2 rounded-md ring-teal-500">
-                <img src="/images/HTML5_logo.svg" alt="HTML5" class="w-20 h-20 object-contain">
-                <img src="/images/CSS3_logo.svg" alt="CSS" class="w-20 h-20 object-contain">
-                <img src="/images/Tailwind_CSS_Logo.svg" alt="Tailwind CSS" class="w-20 h-20 object-contain">
+            <!-- Navigasi -->
+            <nav class="space-x-4">
+                <a href="#home" class="hover:text-gray-400">Home</a>
+                <a href="#about" class="hover:text-gray-400">About</a>
+                <a href="#experience" class="hover:text-gray-400">Experience</a>
+                <a href="#projects" class="hover:text-gray-400">Projects</a>
+                <a href="#contact" class="hover:text-gray-400">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="flex flex-col md:flex-row items-center justify-between p-8 bg-white">
+        <!-- Tulisan Penyambut -->
+        <div class="text-left space-y-4">
+            <h2 class="text-4xl font-bold">
+                Hi, I'm <span id="dynamic-font" class="hover-stop">Rifki</span>, A Passionate Software Engineer.
+            </h2>
+            <p class="text-xl">
+                Ready to Build and Innovate!
+            </p>
+            <!-- Ikon Media Sosial -->
+            <div class="flex space-x-4 mt-4">
+                <a href="https://github.com/kakarifki" target="_blank" class="text-gray-800 hover:text-gray-500">
+                    <i class="fab fa-github text-3xl"></i>
+                </a>
+                <a href="https://www.instagram.com/rifkiseptiawan" target="_blank" class="text-gray-800 hover:text-gray-500">
+                    <i class="fab fa-instagram text-3xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/muhammadrifkiseptiawan11" target="_blank" class="text-gray-800 hover:text-gray-500">
+                    <i class="fab fa-linkedin text-3xl"></i>
+                </a>
             </div>
+        </div>
+    
+        <!-- Foto -->
+        <div class="mt-8 md:mt-0 md:ml-8">
+            <img src="/images/profile_photo.jpg" alt="Foto Rifki" class="w-64 h-64 object-cover rounded-full shadow-lg">
         </div>
     </section>
     <section id="about" class="bg-teal-600 my-8 py-10 px-10 rounded-lg" data-aos="fade-up">

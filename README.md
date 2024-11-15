@@ -9,7 +9,8 @@ This website is divided into 6 sections
 3. About
 4. Experience
 5. Projects
-6. Footer
+6. 
+7. Footer
 
 ## Header
 There's navigation bar for navigating trough website; Home, About, Experience, Project, dan Contact
