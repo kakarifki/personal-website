@@ -29,3 +29,37 @@ a {
 header {
   z-index: 1000; /* Ensure header is on top */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+  header nav {
+    @apply flex flex-col;
+  }
+  header nav a {
+    @apply my-2;
+  }
+  #home {
+    @apply flex flex-col;
+  }
+  #home div:first-child {
+    @apply w-full mb-4;
+  }
+  #home div:last-child {
+    @apply w-full;
+  }
+  #about .my-8 {
+    @apply my-4;
+  }
+  #about .text-justify {
+    @apply text-center;
+  }
+  #experience .grid {
+    @apply grid-cols-1;
+  }
+  #project .grid {
+    @apply grid-cols-1;
+  }
+}
