@@ -3,75 +3,101 @@ const fonts = ['Arial', 'Georgia', 'Courier New', 'Times New Roman', 'Verdana', 
 
 let intervalId;
 
+// Function to change font randomly
 function changeFontRandomly() {
     const element = document.getElementById('dynamic-font');
     const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
     element.style.fontFamily = randomFont;
 }
 
-// Fungsi untuk memulai animasi
+// Function to start the animation
 function startAnimation() {
     intervalId = setInterval(changeFontRandomly, 300);
 }
 
-// Fungsi untuk menghentikan animasi
+// Function to stop the animation
 function stopAnimation() {
     clearInterval(intervalId);
 }
 
-// Mulai animasi saat halaman dimuat
+// Start animation when the page loads
 startAnimation();
 
-// Hentikan animasi saat di-hover
+// Stop animation on hover
 document.getElementById('dynamic-font').addEventListener('mouseover', function() {
     stopAnimation();
 });
 
-// Lanjutkan animasi saat hover selesai
+// Resume animation when hover ends
 document.getElementById('dynamic-font').addEventListener('mouseout', function() {
     startAnimation();
 });
 
+// Fetch project data from projects.json
 fetch('projects.json')
   .then(response => response.json())
   .then(projects => {
-    const projectsSection = document.getElementById('project');
-    const projectGrid = projectsSection.querySelector('.grid');
+    const projectsSection = document.getElementById('project'); // Get the projects section
+    const projectGrid = projectsSection.querySelector('.grid'); // Get the grid container for appending project cards
 
+    // Map of skills to colors
+    const skillColors = {
+      "HTML": "bg-blue-500",
+      "CSS": "bg-green-500",
+      "JavaScript": "bg-yellow-500",
+      "React": "bg-purple-500",
+      "Node.js": "bg-pink-500",
+      "Python": "bg-orange-500",
+      "Java": "bg-teal-500",
+      "C++": "bg-red-500"
+    };
+
+    // Iterate through each project in the projects array
     projects.forEach(project => {
+      // Create a div element for each project card
       const projectCard = document.createElement('div');
+      // Add Tailwind CSS classes for styling
       projectCard.classList.add('bg-white', 'shadow-md', 'rounded-lg', 'overflow-hidden', 'p-4', 'm-2');
 
+      // Create an img element for the project image
       const img = document.createElement('img');
       img.src = project.image;
       img.alt = project.title;
       img.classList.add('w-full', 'h-48', 'object-cover');
-      projectCard.appendChild(img);
+      projectCard.appendChild(img); // Append the image to the card
 
+      // Create a div element for the project content
       const content = document.createElement('div');
       content.classList.add('p-4');
 
+      // Create an h2 element for the project title
       const title = document.createElement('h2');
       title.textContent = project.title;
       title.classList.add('text-xl', 'font-bold', 'text-gray-800');
-      content.appendChild(title);
+      content.appendChild(title); // Append the title to the content
 
+      // Create a p element for the project description
       const description = document.createElement('p');
       description.textContent = project.description;
       description.classList.add('text-gray-600');
-      content.appendChild(description);
+      content.appendChild(description); // Append the description to the content
 
+      // Create a div element for the project skills
       const skills = document.createElement('div');
       skills.classList.add('mt-2');
+      // Iterate through each skill in the project's skills array
       project.skills.forEach(skill => {
+        // Create a span element for each skill
         const skillSpan = document.createElement('span');
-        skillSpan.classList.add('inline-block', 'bg-blue-500', 'text-white', 'rounded-full', 'px-3', 'py-1', 'text-sm', 'font-semibold', 'mr-2');
+        // Add Tailwind CSS classes for styling, using color from skillColors map
+        const colorClass = skillColors[skill] || 'bg-gray-500'; // Default to gray if skill not found in map
+        skillSpan.classList.add('inline-block', colorClass, 'text-white', 'rounded-full', 'px-3', 'py-1', 'text-sm', 'font-semibold', 'mr-2');
         skillSpan.textContent = skill;
-        skills.appendChild(skillSpan);
+        skills.appendChild(skillSpan); // Append the skill to the skills div
       });
-      content.appendChild(skills);
+      content.appendChild(skills); // Append the skills div to the content
 
-      projectCard.appendChild(content);
-      projectGrid.appendChild(projectCard);
+      projectCard.appendChild(content); // Append the content to the card
+      projectGrid.appendChild(projectCard); // Append the card to the grid
     });
   });

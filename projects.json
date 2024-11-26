@@ -3,13 +3,13 @@
     "title": "Project 1",
     "image": "/images/white.jpg",
     "description": "Description of Project 1",
-    "skills": ["HTML", "CSS", "JavaScript"]
+    "skills": ["HTML", "CSS", "JavaScript", "CSS"]
   },
   {
     "title": "Project 2",
     "image": "/images/white.jpg",
     "description": "Description of Project 2",
-    "skills": ["HTML", "CSS", "JavaScript"]
+    "skills": ["HTML", "CSS", "JavaScript", "Typrscript"]
   },
   {
     "title": "Project 3",
@@ -18,7 +18,7 @@
     "skills": ["HTML", "CSS", "JavaScript"]
   },
   {
-    "title": "Project 4",
+    "title": "Project 12123",
     "image": "/images/white.jpg",
     "description": "Description of Project 4",
     "skills": ["HTML", "CSS", "JavaScript"]
