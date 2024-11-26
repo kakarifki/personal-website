@@ -25,3 +25,7 @@ a {
   @apply rounded;
   @apply hover:bg-[#bd1e51];
 }
+
+header {
+  z-index: 1000; /* Ensure header is on top */
+}
