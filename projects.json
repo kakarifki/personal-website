@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Project 1",
+    "image": "/images/white.jpg",
+    "description": "Description of Project 1",
+    "skills": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "Project 2",
+    "image": "/images/white.jpg",
+    "description": "Description of Project 2",
+    "skills": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "Project 3",
+    "image": "/images/white.jpg",
+    "description": "Description of Project 3",
+    "skills": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "Project 4",
+    "image": "/images/white.jpg",
+    "description": "Description of Project 4",
+    "skills": ["HTML", "CSS", "JavaScript"]
+  }
+]
