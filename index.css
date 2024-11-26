@@ -1,4 +1,27 @@
-.hover-stop:hover {
-    animation: none; /* Menghentikan animasi saat di-hover */
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#fefefe]; /* Lightest color as background */
+  @apply text-[#265791]; /* Darkest color as text */
 }
 
+h1, h2, h3 {
+  @apply text-[#265791];
+}
+
+a {
+  @apply text-[#f1b814]; /* Medium color for links */
+  @apply hover:underline;
+}
+
+.button {
+  @apply bg-[#265791];
+  @apply text-white;
+  @apply px-4;
+  @apply py-2;
+  @apply rounded;
+  @apply hover:bg-[#bd1e51];
+}
