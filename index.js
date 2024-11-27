@@ -101,3 +101,23 @@ fetch('projects.json')
       projectGrid.appendChild(projectCard); // Append the card to the grid
     });
   });
+
+
+// Hamburger menu functionality
+const hamburger = document.createElement('button');
+hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+hamburger.classList.add('block', 'md:hidden', 'text-3xl', 'text-white', 'cursor-pointer');
+document.querySelector('header').appendChild(hamburger);
+
+const nav = document.querySelector('header nav');
+let isOpen = false;
+
+hamburger.addEventListener('click', () => {
+  isOpen = !isOpen;
+  nav.classList.toggle('hidden');
+  nav.classList.toggle('block');
+  nav.classList.toggle('flex');
+  nav.classList.toggle('flex-col');
+  nav.classList.toggle('w-full');
+  nav.classList.toggle('mt-4');
+});
