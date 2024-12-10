@@ -1,3 +1,41 @@
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    // Toggle mobile menu
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+        mobileNav.classList.toggle('flex');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.add('hidden');
+            mobileNav.classList.remove('flex');
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        });
+    });
+
+    // Optional: Prevent scroll when mobile menu is open
+    const body = document.body;
+    const toggleBodyScroll = () => {
+        body.classList.toggle('overflow-hidden');
+    };
+
+    mobileMenuToggle.addEventListener('click', toggleBodyScroll);
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', toggleBodyScroll);
+    });
+});
+
 // Array berisi nama font yang diinginkan
 const fonts = ['Arial', 'Georgia', 'Courier New', 'Times New Roman', 'Verdana', 'Tahoma', 'Lucida Console'];
 
@@ -101,21 +139,3 @@ fetch('projects.json')
       projectGrid.appendChild(projectCard); // Append the card to the grid
     });
   });
-
-// Hamburger menu functionality
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav-menu');
-let isOpen = false;
-
-hamburger.addEventListener('click', () => {
-  isOpen = !isOpen;
-  nav.classList.toggle('hidden');
-  nav.classList.toggle('block');
-  nav.classList.toggle('flex');
-  nav.classList.toggle('flex-col');
-  nav.classList.toggle('w-full');
-  nav.classList.toggle('mt-4');
-  
-  // Hide hamburger icon when menu is open
-  // hamburger.classList.toggle('hidden', isOpen);
-});

@@ -27,28 +27,43 @@
     <meta name="description" content="Rifki Septiawan Personal Website">
 </head>
 <body class="font-exo" style="font-family: 'Exo 2', sans-serif;">
-    <header class="sticky top-0 bg-[#265791] text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Kondisional untuk nama atau logo -->
+    <header class="sticky top-0 bg-[#265791] text-white p-4 z-50">
+        <div class="container mx-auto flex justify-between items-center relative">
+            <!-- Logo/Name -->
             <div class="flex items-center">
                 <span id="logo-name" class="text-2xl font-bold">Rifki Septiawan</span>
             </div>
-            <!-- Hamburger menu button -->
-            <button id="hamburger" class="md:hidden flex items-center focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            
+            <!-- Hamburger Menu Button -->
+            <button id="mobile-menu-toggle" class="md:hidden absolute right-0 top-1/2 transform -translate-y-1/2 z-50">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
             </button>
-            <!-- Navigasi -->
-            <nav id="nav-menu" class="hidden space-x-4">
-                <a href="#home" class="hover:text-gray-400">Home</a>
-                <a href="#about" class="hover:text-gray-400">About</a>
-                <a href="#experience" class="hover:text-gray-400">Experience</a>
-                <a href="#project" class="hover:text-gray-400">Projects</a>
-                <a href="mailto:rifkim91@gmail.com" class="hover:text-gray-400">Contact</a>
+
+            <!-- Desktop Navigation -->
+            <nav id="desktop-nav" class="hidden md:flex space-x-4">
+                <a href="#home" class="hover:text-gray-400 transition duration-300">Home</a>
+                <a href="#about" class="hover:text-gray-400 transition duration-300">About</a>
+                <a href="#experience" class="hover:text-gray-400 transition duration-300">Experience</a>
+                <a href="#project" class="hover:text-gray-400 transition duration-300">Projects</a>
+                <a href="mailto:rifkim91@gmail.com" class="hover:text-gray-400 transition duration-300">Contact</a>
+            </nav>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-nav" class="fixed inset-0 bg-[#265791] flex-col items-center justify-center space-y-6 text-2xl hidden">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#experience" class="mobile-nav-link">Experience</a>
+                <a href="#project" class="mobile-nav-link">Projects</a>
+                <a href="mailto:rifkim91@gmail.com" class="mobile-nav-link">Contact</a>
             </nav>
         </div>
     </header>
+    <!-- Rest of the HTML remains the same -->
     <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-between p-8 bg-[#fefefe] pt-[60px]">
         <div class="w-full md:w-1/2">
             <h2 class="text-4xl md:text-5xl font-bold text-[#265791]">

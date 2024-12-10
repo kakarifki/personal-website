@@ -62,4 +62,5 @@ header {
   #project .grid {
     @apply grid-cols-1;
   }
+
 }
