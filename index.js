@@ -102,14 +102,9 @@ fetch('projects.json')
     });
   });
 
-
 // Hamburger menu functionality
-const hamburger = document.createElement('button');
-hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-hamburger.classList.add('block', 'md:hidden', 'text-3xl', 'text-white', 'cursor-pointer');
-document.querySelector('header').appendChild(hamburger);
-
-const nav = document.querySelector('header nav');
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav-menu');
 let isOpen = false;
 
 hamburger.addEventListener('click', () => {
@@ -120,4 +115,7 @@ hamburger.addEventListener('click', () => {
   nav.classList.toggle('flex-col');
   nav.classList.toggle('w-full');
   nav.classList.toggle('mt-4');
+  
+  // Hide hamburger icon when menu is open
+  // hamburger.classList.toggle('hidden', isOpen);
 });

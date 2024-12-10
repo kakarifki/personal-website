@@ -32,11 +32,15 @@
             <!-- Kondisional untuk nama atau logo -->
             <div class="flex items-center">
                 <span id="logo-name" class="text-2xl font-bold">Rifki Septiawan</span>
-                <!-- Jika ingin mengganti dengan logo, tambahkan tag <img> dan sembunyikan teks dengan JavaScript atau CSS -->
-                <!-- <img id="logo-image" src="path/to/logo.png" alt="Logo" class="hidden"> -->
             </div>
+            <!-- Hamburger menu button -->
+            <button id="hamburger" class="md:hidden flex items-center focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
             <!-- Navigasi -->
-            <nav class="space-x-4">
+            <nav id="nav-menu" class="hidden space-x-4">
                 <a href="#home" class="hover:text-gray-400">Home</a>
                 <a href="#about" class="hover:text-gray-400">About</a>
                 <a href="#experience" class="hover:text-gray-400">Experience</a>
@@ -46,7 +50,6 @@
         </div>
     </header>
     <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-between p-8 bg-[#fefefe] pt-[60px]">
-        <!-- Tulisan Penyambut -->
         <div class="w-full md:w-1/2">
             <h2 class="text-4xl md:text-5xl font-bold text-[#265791]">
                 Hi, I'm <span id="dynamic-font" class="hover-stop">Rifki</span>, A Passionate Software Engineer.
@@ -54,7 +57,6 @@
             <p class="text-xl md:text-2xl text-[#265791]">
                 Ready to Build and Innovate!
             </p>
-            <!-- Ikon Media Sosial -->
             <div class="flex space-x-4 mt-4">
                 <a href="https://github.com/kakarifki" target="_blank" class="text-[#265791] hover:text-[#f1b814]">
                     <i class="fab fa-github text-3xl"></i>
@@ -67,8 +69,6 @@
                 </a>
             </div>
         </div>
-        
-        <!-- Foto -->
         <div class="mt-8 md:mt-0 md:ml-8 md:w-1/2 flex justify-end">
             <img src="https://github.com/kakarifki/personal-website/blob/master/images/profile_photo.JPG?raw=true" alt="Foto Rifki" class="w-64 md:w-80 h-64 md:h-80 object-cover rounded-full shadow-lg">
         </div>
