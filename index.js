@@ -85,9 +85,9 @@ fetch('projects.json')
       "JavaScript": "bg-yellow-500",
       "React": "bg-purple-500",
       "Node.js": "bg-pink-500",
-      "Python": "bg-orange-500",
-      "Java": "bg-teal-500",
-      "C++": "bg-red-500"
+      "Vite": "bg-orange-500",
+      "Hono": "bg-teal-500",
+      "Docker": "bg-red-500"
     };
 
     // Iterate through each project in the projects array

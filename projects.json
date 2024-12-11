@@ -1,26 +1,26 @@
 [
   {
-    "title": "Project 1",
+    "title": "Personal Website",
     "image": "/images/white.jpg",
-    "description": "Description of Project 1",
-    "skills": ["HTML", "CSS", "JavaScript", "CSS"]
+    "description": "Personal Website as a Portofolio",
+    "skills": ["HTML", "Tailwind CSS", "JavaScript"]
   },
   {
-    "title": "Project 2",
+    "title": "Address Book",
     "image": "/images/white.jpg",
-    "description": "Description of Project 2",
-    "skills": ["HTML", "CSS", "JavaScript", "Typrscript"]
+    "description": "Address book webapp for saving your contacts",
+    "skills": ["HTML", "Tailwind CSS", "JavaScript"]
   },
   {
-    "title": "Project 3",
+    "title": "To-do-Least",
     "image": "/images/white.jpg",
-    "description": "Description of Project 3",
-    "skills": ["HTML", "CSS", "JavaScript"]
+    "description": "A to-do-list app for organizing your task",
+    "skills": ["HTML", "Tailwind CSS", "TypeScript", "React", "Vite"]
   },
   {
-    "title": "Project 12123",
+    "title": "Backend project",
     "image": "/images/white.jpg",
-    "description": "Description of Project 4",
-    "skills": ["HTML", "CSS", "JavaScript"]
+    "description": "Ongoing",
+    "skills": ["Hono", "Docker"]
   }
 ]
