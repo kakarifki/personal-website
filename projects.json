@@ -31,7 +31,7 @@
     "title": "JKT48 Fanbase Merch - Frontend",
     "image": "/images/fanbase-merch-fe.png",
     "description": "Frontend for JKT48 fanbase merch e-commerce platform",
-    "skills": ["React", "Vite", "Tailwind CSS", "TypeScript", "React Query"],
+    "skills": ["React", "Vite", "Tailwind CSS", "TypeScript", "React Query", "Auth"],
     "url": "https://jkt48-fanbase-merch.rifkiseptiawan.com/"
   }, 
   {

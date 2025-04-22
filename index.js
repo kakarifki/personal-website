@@ -80,14 +80,29 @@ fetch('projects.json')
 
     // Map of skills to colors
     const skillColors = {
-      "HTML": "bg-blue-500",
-      "CSS": "bg-green-500",
-      "JavaScript": "bg-yellow-500",
-      "React": "bg-purple-500",
-      "Node.js": "bg-pink-500",
-      "Vite": "bg-orange-500",
-      "Hono": "bg-teal-500",
-      "Docker": "bg-red-500"
+      "HTML": "bg-orange-600",
+      "CSS": "bg-blue-600",
+      "JavaScript": "bg-yellow-400",
+      "TypeScript": "bg-blue-500",
+      "React": "bg-cyan-400",
+      "React Router": "bg-red-500",
+      "React Query": "bg-red-600",
+      "NextJS": "bg-black",
+      "Node.js": "bg-green-600",
+      "Vite": "bg-purple-600",
+      "Hono": "bg-gray-800",
+      "Docker": "bg-blue-700",
+      "OpenAPI": "bg-green-500",
+      "Swagger UI": "bg-emerald-500",
+      "Scalar": "bg-violet-500",
+      "Zod": "bg-blue-800",
+      "PostgreSQL": "bg-blue-900",
+      "Prisma": "bg-slate-800",
+      "JWT Auth": "bg-yellow-600",
+      "Auth": "bg-orange-500",
+      "Dashboard": "bg-sky-500",
+      "Tailwind CSS": "bg-cyan-500",
+      "Ky": "bg-pink-500"
     };
 
     // Iterate through each project in the projects array
