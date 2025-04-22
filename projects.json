@@ -22,10 +22,10 @@
   },
   {
     "title": "Indonesian Culture REST API",
-    "image": "/images/restAPI.png",
-    "description": "An API for fetching Indonesia heritage data",
-    "skills": ["Hono", "OpenAPI", "Docker", "Zod", "PostgreSQL", "Prisma"],
-    "url": "https://indonesia-heritage-api.rifkiseptiawan.com"
+    "image": "/images/restAPISwagger.png",
+    "description": "An API for fetching Indonesia heritage data with Swagger UI",
+    "skills": ["Hono", "OpenAPI", "Swagger UI", "Docker", "Zod", "PostgreSQL", "Prisma"],
+    "url": "https://indonesia-heritage-api.rifkiseptiawan.com/api"
   },
   {
     "title": "JKT48 Fanbase Merch - Frontend",
