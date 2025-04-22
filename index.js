@@ -93,9 +93,12 @@ fetch('projects.json')
     // Iterate through each project in the projects array
     projects.forEach(project => {
       // Create a div element for each project card
-      const projectCard = document.createElement('div');
+      const projectCard = document.createElement('a');
+      // Add href and target attributes
+      projectCard.href = project.url;
+      projectCard.target = '_blank';
       // Add Tailwind CSS classes for styling
-      projectCard.classList.add('bg-white', 'shadow-md', 'rounded-lg', 'overflow-hidden', 'p-4', 'm-2');
+      projectCard.classList.add('bg-white', 'shadow-md', 'rounded-lg', 'overflow-hidden', 'p-4', 'm-2', 'block', 'hover:shadow-lg', 'transition-shadow', 'duration-300');
 
       // Create an img element for the project image
       const img = document.createElement('img');
