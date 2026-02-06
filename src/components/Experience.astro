@@ -1,0 +1,57 @@
+---
+import ExperienceCard from './ExperienceCard.astro';
+
+const experiences = [
+  {
+    title: "General Affair & IT Support",
+    company: "Jakmall.com",
+    period: "Apr 2025 - Jul 2025",
+    responsibilities: [
+      "Respond promptly to IT-related requests and troubleshoot issues",
+      "Manage office supplies procurement, inventory, and distribution",
+      "Setup new devices before handover",
+      "Maintenance Server for optimal networking usage"
+    ]
+  },
+  {
+    title: "IT Support",
+    company: "PT Prawita Karya",
+    period: "Sep 2023 - Aug 2024",
+    responsibilities: [
+      "Supported employees by troubleshooting hardware, software, and network issues",
+      "Monitored and maintained the company's IT infrastructure",
+      "Assisted with IT-related projects, including system upgrades and migrations"
+    ]
+  },
+  {
+    title: "QAQC Staff",
+    company: "PT Adhi Karya (Persero) Tbk.",
+    period: "Jun 2022 - Jul 2023",
+    responsibilities: [
+      "Responsible for archiving, updating, creating and editing all QA/QC documents",
+      "Created Weekly Dashboard reports for Owner",
+      "Participated in internal and external quality control inspections and audits",
+      "Connected documents between Consultant and QA/QC"
+    ]
+  }
+];
+---
+
+<section id="experience" class="py-24 relative">
+  <div class="container mx-auto px-4">
+    <!-- Section Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        My <span class="gradient-text">Experience</span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-[#f1b814] to-[#bd1e51] mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Experience Grid -->
+    <div class="max-w-4xl mx-auto grid gap-6">
+      {experiences.map((exp) => (
+        <ExperienceCard {...exp} />
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+---
+const currentYear = new Date().getFullYear();
+
+const socialLinks = [
+  { href: "https://github.com/kakarifki", icon: "fab fa-github", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/muhammadrifkiseptiawan11", icon: "fab fa-linkedin", label: "LinkedIn" },
+  { href: "https://www.instagram.com/rifkiseptiawan", icon: "fab fa-instagram", label: "Instagram" },
+  { href: "mailto:rifkim91@gmail.com", icon: "fas fa-envelope", label: "Email" },
+];
+---
+
+<footer class="py-12 border-t border-white/10">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <!-- Logo -->
+      <div class="text-center md:text-left">
+        <a href="#home" class="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">
+          Rifki Septiawan
+        </a>
+        <p class="text-gray-500 text-sm mt-1">Software Engineer</p>
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex items-center gap-4">
+        {socialLinks.map((link) => (
+          <a
+            href={link.href}
+            target={link.href.startsWith('mailto') ? undefined : "_blank"}
+            rel="noopener noreferrer"
+            aria-label={link.label}
+            class="w-10 h-10 flex items-center justify-center rounded-full glass text-gray-400 hover:text-[#f1b814] hover:border-[#f1b814]/50 transition-all duration-300"
+          >
+            <i class={`${link.icon} text-lg`}></i>
+          </a>
+        ))}
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-gray-500 text-sm">
+        &copy; {currentYear} KakaRifki. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

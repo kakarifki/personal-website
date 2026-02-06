@@ -1,0 +1,82 @@
+---
+const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "mailto:rifkim91@gmail.com", label: "Contact" },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 glass">
+  <div class="container mx-auto px-4 py-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#home" class="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">
+        Rifki Septiawan
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-[#f1b814] transition-all duration-300"
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-toggle"
+        class="md:hidden p-2 text-gray-300 hover:text-white transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-nav" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4">
+      <div class="flex flex-col gap-4">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="mobile-nav-link text-gray-300 hover:text-white hover:pl-2 transition-all duration-300"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  mobileMenuToggle?.addEventListener('click', () => {
+    mobileNav?.classList.toggle('hidden');
+    hamburgerIcon?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+  });
+
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav?.classList.add('hidden');
+      hamburgerIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+    });
+  });
+</script>

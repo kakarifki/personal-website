@@ -1,0 +1,103 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+const projects = [
+  {
+    title: "Personal Website",
+    image: "/images/personal-website.png",
+    description: "Personal Website as a Portfolio - Built with Astro & Tailwind CSS",
+    skills: ["Astro", "Tailwind CSS", "TypeScript"],
+    url: "https://kakarifki.web.id",
+    slug: "personal-website"
+  },
+  {
+    title: "Address Book",
+    image: "/images/white.jpg",
+    description: "Address book webapp for saving your contacts",
+    skills: ["HTML", "Tailwind CSS", "JavaScript"],
+    url: "https://contacts-book.rifkiseptiawan.com",
+    slug: "address-book"
+  },
+  {
+    title: "To-do-Least",
+    image: "/images/todoleast.png",
+    description: "A to-do-list app for organizing your tasks",
+    skills: ["HTML", "Tailwind CSS", "TypeScript", "React", "Vite"],
+    url: "https://to-do-least.rifkiseptiawan.com",
+    slug: "to-do-least"
+  },
+  {
+    title: "Indonesian Culture REST API",
+    image: "/images/restAPISwagger.png",
+    description: "An API for fetching Indonesia heritage data with Swagger UI",
+    skills: ["Hono", "OpenAPI", "Swagger UI", "Docker", "Zod", "PostgreSQL", "Prisma"],
+    url: "https://indonesia-heritage-api.rifkiseptiawan.com/api",
+    slug: "indonesia-heritage-api"
+  },
+  {
+    title: "JKT48 Fanbase Merch - Frontend",
+    image: "/images/fanbase-merch-fe.png",
+    description: "Frontend for JKT48 fanbase merch e-commerce platform",
+    skills: ["React", "Vite", "Tailwind CSS", "TypeScript", "React Query", "Auth"],
+    url: "https://jkt48-fanbase-merch.rifkiseptiawan.com/",
+    slug: "jkt48-fanbase-merch-fe"
+  },
+  {
+    title: "JKT48 Fanbase Merch - Backend",
+    image: "/images/white.jpg",
+    description: "Backend for JKT48 fanbase merch e-commerce platform",
+    skills: ["Hono", "Docker", "Zod", "PostgreSQL", "Prisma", "JWT Auth"],
+    url: "https://fanbase-merch-backend.onrender.com/",
+    slug: "jkt48-fanbase-merch-be"
+  },
+  {
+    title: "Videoboxd - Frontend",
+    image: "/images/videoboxd-fe.png",
+    description: "Review and rating platform for YouTube Videos",
+    skills: ["React Router", "Vite", "Tailwind CSS", "TypeScript", "Ky"],
+    url: "https://videoboxd.com/",
+    slug: "videoboxd-fe"
+  },
+  {
+    title: "Videoboxd - Backend",
+    image: "/images/videoboxd-be.png",
+    description: "Backend for Videoboxd with RestAPI and Scalar",
+    skills: ["Hono", "OpenAPI", "Scalar", "Docker", "Zod", "PostgreSQL", "Prisma", "JWT Auth"],
+    url: "https://api.videoboxd.com/",
+    slug: "videoboxd-be"
+  },
+  {
+    title: "Tanti's Portfolio Website",
+    image: "/images/tanti.png",
+    description: "Personal Website for Tanti Pujian, a Virtual Assistant",
+    skills: ["NextJS", "Tailwind CSS", "TypeScript", "Auth", "Dashboard"],
+    url: "https://tantipujian.vercel.app",
+    slug: "tanti-portfolio"
+  }
+];
+---
+
+<section id="projects" class="py-24 relative">
+  <!-- Background Accent -->
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#265791]/5 to-transparent"></div>
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <!-- Section Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        My <span class="gradient-text">Projects</span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-[#f1b814] to-[#bd1e51] mx-auto rounded-full mb-4"></div>
+      <p class="text-gray-400 max-w-xl mx-auto">
+        A collection of my work showcasing various technologies and solutions.
+      </p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map((project) => (
+        <ProjectCard {...project} />
+      ))}
+    </div>
+  </div>
+</section>

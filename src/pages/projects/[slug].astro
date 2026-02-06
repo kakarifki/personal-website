@@ -1,0 +1,318 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+interface Project {
+  title: string;
+  image: string;
+  description: string;
+  longDescription: string;
+  skills: string[];
+  url: string;
+  github: string;
+  slug: string;
+}
+
+// Define all projects data
+const allProjects: Project[] = [
+  {
+    title: "Personal Website",
+    image: "/images/personal-website.png",
+    description: "Personal Website as a Portfolio - Built with Astro & Tailwind CSS",
+    longDescription: "A modern personal portfolio website showcasing my projects and skills. Built from scratch using Astro for static site generation and Tailwind CSS for styling. Features include smooth animations, responsive design, and optimized performance.",
+    skills: ["Astro", "Tailwind CSS", "TypeScript"],
+    url: "https://kakarifki.web.id",
+    github: "https://github.com/kakarifki/personal-website",
+    slug: "personal-website"
+  },
+  {
+    title: "Address Book",
+    image: "/images/white.jpg",
+    description: "Address book webapp for saving your contacts",
+    longDescription: "A simple yet functional address book web application that allows users to store and manage their contacts. Features include adding, editing, and deleting contacts with local storage persistence.",
+    skills: ["HTML", "Tailwind CSS", "JavaScript"],
+    url: "https://contacts-book.rifkiseptiawan.com",
+    github: "https://github.com/kakarifki",
+    slug: "address-book"
+  },
+  {
+    title: "To-do-Least",
+    image: "/images/todoleast.png",
+    description: "A to-do-list app for organizing your tasks",
+    longDescription: "A feature-rich to-do list application built with React and TypeScript. Helps users organize tasks efficiently with features like task categorization, due dates, and completion tracking.",
+    skills: ["HTML", "Tailwind CSS", "TypeScript", "React", "Vite"],
+    url: "https://to-do-least.rifkiseptiawan.com",
+    github: "https://github.com/kakarifki",
+    slug: "to-do-least"
+  },
+  {
+    title: "Indonesian Culture REST API",
+    image: "/images/restAPISwagger.png",
+    description: "An API for fetching Indonesia heritage data with Swagger UI",
+    longDescription: "A comprehensive REST API providing data about Indonesian cultural heritage. Built with Hono framework and documented with Swagger UI. Features include CRUD operations, data validation with Zod, and PostgreSQL database.",
+    skills: ["Hono", "OpenAPI", "Swagger UI", "Docker", "Zod", "PostgreSQL", "Prisma"],
+    url: "https://indonesia-heritage-api.rifkiseptiawan.com/api",
+    github: "https://github.com/kakarifki",
+    slug: "indonesia-heritage-api"
+  },
+  {
+    title: "JKT48 Fanbase Merch - Frontend",
+    image: "/images/fanbase-merch-fe.png",
+    description: "Frontend for JKT48 fanbase merch e-commerce platform",
+    longDescription: "A modern e-commerce frontend for JKT48 fanbase merchandise. Built with React and TypeScript, featuring product browsing, cart management, user authentication, and responsive design.",
+    skills: ["React", "Vite", "Tailwind CSS", "TypeScript", "React Query", "Auth"],
+    url: "https://jkt48-fanbase-merch.rifkiseptiawan.com/",
+    github: "https://github.com/kakarifki",
+    slug: "jkt48-fanbase-merch-fe"
+  },
+  {
+    title: "JKT48 Fanbase Merch - Backend",
+    image: "/images/white.jpg",
+    description: "Backend for JKT48 fanbase merch e-commerce platform",
+    longDescription: "A robust backend API for the JKT48 fanbase merchandise platform. Handles user authentication with JWT, product management, order processing, and database operations with Prisma ORM.",
+    skills: ["Hono", "Docker", "Zod", "PostgreSQL", "Prisma", "JWT Auth"],
+    url: "https://fanbase-merch-backend.onrender.com/",
+    github: "https://github.com/kakarifki",
+    slug: "jkt48-fanbase-merch-be"
+  },
+  {
+    title: "Videoboxd - Frontend",
+    image: "/images/videoboxd-fe.png",
+    description: "Review and rating platform for YouTube Videos",
+    longDescription: "A social platform for reviewing and rating YouTube videos. Users can search videos, write reviews, rate content, and discover new videos based on community recommendations.",
+    skills: ["React Router", "Vite", "Tailwind CSS", "TypeScript", "Ky"],
+    url: "https://videoboxd.com/",
+    github: "https://github.com/kakarifki",
+    slug: "videoboxd-fe"
+  },
+  {
+    title: "Videoboxd - Backend",
+    image: "/images/videoboxd-be.png",
+    description: "Backend for Videoboxd with RestAPI and Scalar",
+    longDescription: "The backend powering Videoboxd platform. Features a complete REST API with Scalar documentation, user authentication, video data management, and review/rating systems.",
+    skills: ["Hono", "OpenAPI", "Scalar", "Docker", "Zod", "PostgreSQL", "Prisma", "JWT Auth"],
+    url: "https://api.videoboxd.com/",
+    github: "https://github.com/kakarifki",
+    slug: "videoboxd-be"
+  },
+  {
+    title: "Tanti's Portfolio Website",
+    image: "/images/tanti.png",
+    description: "Personal Website for Tanti Pujian, a Virtual Assistant",
+    longDescription: "A professional portfolio website for a Virtual Assistant. Features include service showcase, portfolio section, contact form, and an admin dashboard for content management.",
+    skills: ["NextJS", "Tailwind CSS", "TypeScript", "Auth", "Dashboard"],
+    url: "https://tantipujian.vercel.app",
+    github: "https://github.com/kakarifki",
+    slug: "tanti-portfolio"
+  }
+];
+
+export function getStaticPaths() {
+  const projects: Project[] = [
+    {
+      title: "Personal Website",
+      image: "/images/personal-website.png",
+      description: "Personal Website as a Portfolio - Built with Astro & Tailwind CSS",
+      longDescription: "A modern personal portfolio website showcasing my projects and skills. Built from scratch using Astro for static site generation and Tailwind CSS for styling. Features include smooth animations, responsive design, and optimized performance.",
+      skills: ["Astro", "Tailwind CSS", "TypeScript"],
+      url: "https://kakarifki.web.id",
+      github: "https://github.com/kakarifki/personal-website",
+      slug: "personal-website"
+    },
+    {
+      title: "Address Book",
+      image: "/images/white.jpg",
+      description: "Address book webapp for saving your contacts",
+      longDescription: "A simple yet functional address book web application that allows users to store and manage their contacts. Features include adding, editing, and deleting contacts with local storage persistence.",
+      skills: ["HTML", "Tailwind CSS", "JavaScript"],
+      url: "https://contacts-book.rifkiseptiawan.com",
+      github: "https://github.com/kakarifki",
+      slug: "address-book"
+    },
+    {
+      title: "To-do-Least",
+      image: "/images/todoleast.png",
+      description: "A to-do-list app for organizing your tasks",
+      longDescription: "A feature-rich to-do list application built with React and TypeScript. Helps users organize tasks efficiently with features like task categorization, due dates, and completion tracking.",
+      skills: ["HTML", "Tailwind CSS", "TypeScript", "React", "Vite"],
+      url: "https://to-do-least.rifkiseptiawan.com",
+      github: "https://github.com/kakarifki",
+      slug: "to-do-least"
+    },
+    {
+      title: "Indonesian Culture REST API",
+      image: "/images/restAPISwagger.png",
+      description: "An API for fetching Indonesia heritage data with Swagger UI",
+      longDescription: "A comprehensive REST API providing data about Indonesian cultural heritage. Built with Hono framework and documented with Swagger UI. Features include CRUD operations, data validation with Zod, and PostgreSQL database.",
+      skills: ["Hono", "OpenAPI", "Swagger UI", "Docker", "Zod", "PostgreSQL", "Prisma"],
+      url: "https://indonesia-heritage-api.rifkiseptiawan.com/api",
+      github: "https://github.com/kakarifki",
+      slug: "indonesia-heritage-api"
+    },
+    {
+      title: "JKT48 Fanbase Merch - Frontend",
+      image: "/images/fanbase-merch-fe.png",
+      description: "Frontend for JKT48 fanbase merch e-commerce platform",
+      longDescription: "A modern e-commerce frontend for JKT48 fanbase merchandise. Built with React and TypeScript, featuring product browsing, cart management, user authentication, and responsive design.",
+      skills: ["React", "Vite", "Tailwind CSS", "TypeScript", "React Query", "Auth"],
+      url: "https://jkt48-fanbase-merch.rifkiseptiawan.com/",
+      github: "https://github.com/kakarifki",
+      slug: "jkt48-fanbase-merch-fe"
+    },
+    {
+      title: "JKT48 Fanbase Merch - Backend",
+      image: "/images/white.jpg",
+      description: "Backend for JKT48 fanbase merch e-commerce platform",
+      longDescription: "A robust backend API for the JKT48 fanbase merchandise platform. Handles user authentication with JWT, product management, order processing, and database operations with Prisma ORM.",
+      skills: ["Hono", "Docker", "Zod", "PostgreSQL", "Prisma", "JWT Auth"],
+      url: "https://fanbase-merch-backend.onrender.com/",
+      github: "https://github.com/kakarifki",
+      slug: "jkt48-fanbase-merch-be"
+    },
+    {
+      title: "Videoboxd - Frontend",
+      image: "/images/videoboxd-fe.png",
+      description: "Review and rating platform for YouTube Videos",
+      longDescription: "A social platform for reviewing and rating YouTube videos. Users can search videos, write reviews, rate content, and discover new videos based on community recommendations.",
+      skills: ["React Router", "Vite", "Tailwind CSS", "TypeScript", "Ky"],
+      url: "https://videoboxd.com/",
+      github: "https://github.com/kakarifki",
+      slug: "videoboxd-fe"
+    },
+    {
+      title: "Videoboxd - Backend",
+      image: "/images/videoboxd-be.png",
+      description: "Backend for Videoboxd with RestAPI and Scalar",
+      longDescription: "The backend powering Videoboxd platform. Features a complete REST API with Scalar documentation, user authentication, video data management, and review/rating systems.",
+      skills: ["Hono", "OpenAPI", "Scalar", "Docker", "Zod", "PostgreSQL", "Prisma", "JWT Auth"],
+      url: "https://api.videoboxd.com/",
+      github: "https://github.com/kakarifki",
+      slug: "videoboxd-be"
+    },
+    {
+      title: "Tanti's Portfolio Website",
+      image: "/images/tanti.png",
+      description: "Personal Website for Tanti Pujian, a Virtual Assistant",
+      longDescription: "A professional portfolio website for a Virtual Assistant. Features include service showcase, portfolio section, contact form, and an admin dashboard for content management.",
+      skills: ["NextJS", "Tailwind CSS", "TypeScript", "Auth", "Dashboard"],
+      url: "https://tantipujian.vercel.app",
+      github: "https://github.com/kakarifki",
+      slug: "tanti-portfolio"
+    }
+  ];
+  
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+
+const skillColors: Record<string, string> = {
+  "HTML": "bg-orange-600",
+  "CSS": "bg-blue-600",
+  "JavaScript": "bg-yellow-500",
+  "TypeScript": "bg-blue-500",
+  "React": "bg-cyan-400",
+  "React Router": "bg-red-500",
+  "React Query": "bg-red-600",
+  "NextJS": "bg-gray-800",
+  "Node.js": "bg-green-600",
+  "Vite": "bg-purple-600",
+  "Hono": "bg-orange-500",
+  "Docker": "bg-blue-700",
+  "OpenAPI": "bg-green-500",
+  "Swagger UI": "bg-emerald-500",
+  "Scalar": "bg-violet-500",
+  "Zod": "bg-blue-800",
+  "PostgreSQL": "bg-blue-900",
+  "Prisma": "bg-slate-700",
+  "JWT Auth": "bg-yellow-600",
+  "Auth": "bg-orange-500",
+  "Dashboard": "bg-sky-500",
+  "Tailwind CSS": "bg-cyan-500",
+  "Ky": "bg-pink-500",
+  "Astro": "bg-purple-500"
+};
+---
+
+<Layout title={`${project.title} | Rifki Septiawan`} description={project.description}>
+  <Header />
+  
+  <main class="pt-24 pb-16">
+    <div class="container mx-auto px-4">
+      <!-- Back Button -->
+      <a 
+        href="/#projects" 
+        class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8"
+      >
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Projects</span>
+      </a>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Image -->
+        <div class="glass rounded-3xl overflow-hidden">
+          <img 
+            src={project.image} 
+            alt={project.title}
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="space-y-6">
+          <h1 class="text-4xl md:text-5xl font-bold text-white">
+            {project.title}
+          </h1>
+
+          <p class="text-xl text-gray-300 leading-relaxed">
+            {project.longDescription}
+          </p>
+
+          <!-- Tech Stack -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-3">Tech Stack</h3>
+            <div class="flex flex-wrap gap-2">
+              {project.skills.map((skill) => (
+                <span class={`px-3 py-1 text-sm font-semibold rounded-full ${skillColors[skill] || 'bg-gray-600'} text-white`}>
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a 
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#f1b814] to-[#bd1e51] text-slate-950 font-bold rounded-full hover:shadow-lg hover:shadow-[#f1b814]/25 transition-all duration-300"
+            >
+              <i class="fas fa-external-link-alt"></i>
+              <span>Live Demo</span>
+            </a>
+            <a 
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-6 py-3 glass font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+            >
+              <i class="fab fa-github"></i>
+              <span>View Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

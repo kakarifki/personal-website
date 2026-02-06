@@ -1,0 +1,118 @@
+---
+const socialLinks = [
+  { href: "https://github.com/kakarifki", icon: "fab fa-github", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/muhammadrifkiseptiawan11", icon: "fab fa-linkedin", label: "LinkedIn" },
+  { href: "https://www.instagram.com/rifkiseptiawan", icon: "fab fa-instagram", label: "Instagram" },
+];
+
+const fonts = ['Arial', 'Georgia', 'Courier New', 'Times New Roman', 'Verdana', 'Tahoma', 'Lucida Console'];
+---
+
+<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+  <!-- Animated Background -->
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#265791]/20 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#f1b814]/10 rounded-full blur-3xl animate-float" style="animation-delay: -1.5s;"></div>
+    <div class="absolute top-1/2 right-1/3 w-64 h-64 bg-[#bd1e51]/10 rounded-full blur-3xl animate-float" style="animation-delay: -0.75s;"></div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center max-w-4xl mx-auto">
+      <!-- Greeting -->
+      <p class="text-[#f1b814] text-lg md:text-xl font-medium mb-4 tracking-wider uppercase">
+        Hello, I'm
+      </p>
+      
+      <!-- Name with Dynamic Font Effect -->
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6">
+        <span id="dynamic-font" class="gradient-text cursor-pointer select-none">Rifki</span>
+        <span class="text-white"> Septiawan</span>
+      </h1>
+      
+      <!-- Title -->
+      <div class="flex items-center justify-center gap-4 mb-8">
+        <div class="h-px w-12 bg-gradient-to-r from-transparent to-[#f1b814]"></div>
+        <h2 class="text-xl md:text-2xl lg:text-3xl text-gray-300 font-light">
+          Software Engineer
+        </h2>
+        <div class="h-px w-12 bg-gradient-to-l from-transparent to-[#f1b814]"></div>
+      </div>
+
+      <!-- Tagline -->
+      <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Crafting digital experiences with <span class="text-[#f1b814]">passion</span> and <span class="text-[#bd1e51]">precision</span>.
+        <br class="hidden md:block">
+        Ready to build and innovate.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <a 
+          href="#projects" 
+          class="group px-8 py-4 bg-gradient-to-r from-[#f1b814] to-[#bd1e51] text-slate-950 font-bold rounded-full hover:shadow-lg hover:shadow-[#f1b814]/25 transition-all duration-300 hover:-translate-y-1"
+        >
+          View My Work
+          <span class="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+        <a 
+          href="mailto:rifkim91@gmail.com" 
+          class="px-8 py-4 glass text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
+        >
+          Get In Touch
+        </a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex items-center justify-center gap-6">
+        {socialLinks.map((link) => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={link.label}
+            class="w-12 h-12 flex items-center justify-center rounded-full glass text-gray-400 hover:text-[#f1b814] hover:border-[#f1b814]/50 transition-all duration-300 hover:-translate-y-1"
+          >
+            <i class={`${link.icon} text-xl`}></i>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <a href="#about" class="text-gray-500 hover:text-white transition-colors">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<script define:vars={{ fonts }}>
+  let intervalId;
+  const element = document.getElementById('dynamic-font');
+  
+  function changeFontRandomly() {
+    if (element) {
+      const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+      element.style.fontFamily = randomFont;
+    }
+  }
+  
+  function startAnimation() {
+    intervalId = setInterval(changeFontRandomly, 300);
+  }
+  
+  function stopAnimation() {
+    clearInterval(intervalId);
+    if (element) {
+      element.style.fontFamily = '"Exo 2", sans-serif';
+    }
+  }
+  
+  startAnimation();
+  
+  element?.addEventListener('mouseover', stopAnimation);
+  element?.addEventListener('mouseout', startAnimation);
+</script>
