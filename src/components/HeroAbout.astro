@@ -5,10 +5,16 @@ const socialLinks = [
   { href: "https://www.instagram.com/rifkiseptiawan", icon: "fab fa-instagram", label: "Instagram" },
 ];
 
+const highlights = [
+  { icon: "fas fa-code", text: "Software Engineer" },
+  { icon: "fas fa-graduation-cap", text: "Bootcamp Graduate" },
+  { icon: "fas fa-location-dot", text: "Based in Bekasi" },
+];
+
 const fonts = ['Arial', 'Georgia', 'Courier New', 'Times New Roman', 'Verdana', 'Tahoma', 'Lucida Console'];
 ---
 
-<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden py-20">
   <!-- Animated Background -->
   <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
     <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#265791]/20 rounded-full blur-3xl animate-float"></div>
@@ -29,21 +35,31 @@ const fonts = ['Arial', 'Georgia', 'Courier New', 'Times New Roman', 'Verdana', 
         <span class="text-white"> Septiawan</span>
       </h1>
       
-      <!-- Title -->
-      <div class="flex items-center justify-center gap-4 mb-8">
-        <div class="h-px w-12 bg-gradient-to-r from-transparent to-[#f1b814]"></div>
-        <h2 class="text-xl md:text-2xl lg:text-3xl text-gray-300 font-light">
-          Software Engineer
-        </h2>
-        <div class="h-px w-12 bg-gradient-to-l from-transparent to-[#f1b814]"></div>
+      <!-- Highlights (Integrated from About) -->
+      <div class="flex flex-wrap justify-center gap-4 mb-10">
+        {highlights.map((item) => (
+          <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm transition-transform hover:scale-105">
+            <i class={`${item.icon} text-[#f1b814]`}></i>
+            <span class="text-gray-300 text-sm md:text-base font-medium">{item.text}</span>
+          </div>
+        ))}
       </div>
 
-      <!-- Tagline -->
-      <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-        Crafting digital experiences with <span class="text-[#f1b814]">passion</span> and <span class="text-[#bd1e51]">precision</span>.
-        <br class="hidden md:block">
-        Ready to build and innovate.
-      </p>
+      <!-- Bio (Merged Content) -->
+      <div id="about" class="glass rounded-2xl p-8 mb-10 text-gray-300 leading-relaxed max-w-3xl mx-auto border border-white/10 scroll-mt-32">
+         <p class="text-lg md:text-xl mb-4 font-medium">
+            From <span class="text-[#f1b814]">curiosity</span> to <span class="text-[#bd1e51]">code</span>.
+         </p>
+         <p class="mb-4">
+            Started taking apart computers in middle school, now I build digital solutions.
+            Graduated from <span class="text-[#f1b814] font-semibold">Bearmentor.com</span> bootcamp, 
+            crafting digital experiences with passion and precision.
+         </p>
+         <p class="text-gray-400 text-sm md:text-base">
+            I believe in continuous learning and building solutions that matter.
+            Ready to build and innovate.
+         </p>
+      </div>
 
       <!-- CTA Buttons -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -79,9 +95,9 @@ const fonts = ['Arial', 'Georgia', 'Courier New', 'Times New Roman', 'Verdana', 
     </div>
   </div>
 
-  <!-- Scroll Indicator -->
+  <!-- Scroll Indicator (Pointing to Experience) -->
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-    <a href="#about" class="text-gray-500 hover:text-white transition-colors">
+    <a href="#experience" class="text-gray-500 hover:text-white transition-colors" aria-label="Scroll to experience section">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
