@@ -4,79 +4,119 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
-  { href: "mailto:rifkim91@gmail.com", label: "Contact" },
+  { href: "#contact", label: "Contact" },
 ];
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 glass">
-  <div class="container mx-auto px-4 py-4">
+<header class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5 bg-black/20 backdrop-blur-md">
+  <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
       <!-- Logo -->
-      <a href="#home" class="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">
-        Rifki Septiawan
+      <a href="#home" class="group relative z-50">
+        <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+          Rifki Septiawan
+        </span>
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
       </a>
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-8">
         {navLinks.map((link) => (
-          <a
-            href={link.href}
-            class="text-gray-300 hover:text-white hover:underline underline-offset-4 decoration-[#f1b814] transition-all duration-300"
-          >
-            {link.label}
-          </a>
+          link.label === "Contact" ? (
+            <a
+              href={link.href}
+              class="px-5 py-2 rounded-full font-medium text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              {link.label}
+            </a>
+          ) : (
+            <a
+              href={link.href}
+              class="relative font-medium text-gray-300 hover:text-white transition-colors duration-300 group py-2"
+            >
+              {link.label}
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
+          )
         ))}
       </nav>
 
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-toggle"
-        class="md:hidden p-2 text-gray-300 hover:text-white transition-colors"
+        class="md:hidden relative z-50 p-2 text-gray-300 hover:text-white transition-colors focus:outline-none"
         aria-label="Toggle menu"
       >
-        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
+        <div class="w-6 h-6 flex flex-col justify-center items-center gap-1.5 overflow-hidden">
+          <span id="line-1" class="w-6 h-0.5 bg-current transition-transform duration-300 origin-center"></span>
+          <span id="line-2" class="w-6 h-0.5 bg-current transition-opacity duration-300"></span>
+          <span id="line-3" class="w-6 h-0.5 bg-current transition-transform duration-300 origin-center"></span>
+        </div>
       </button>
     </div>
+  </div>
 
-    <!-- Mobile Navigation -->
-    <nav id="mobile-nav" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4">
-      <div class="flex flex-col gap-4">
-        {navLinks.map((link) => (
-          <a
-            href={link.href}
-            class="mobile-nav-link text-gray-300 hover:text-white hover:pl-2 transition-all duration-300"
-          >
+  <!-- Mobile Navigation Overlay -->
+  <div
+    id="mobile-nav"
+    class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 opacity-0 pointer-events-none translate-y-4"
+  >
+    {navLinks.map((link) => (
+      <a
+        href={link.href}
+        class="mobile-nav-link text-2xl font-bold text-gray-300 hover:text-white hover:scale-110 transition-all duration-300"
+      >
+        {link.label === "Contact" ? (
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
             {link.label}
-          </a>
-        ))}
-      </div>
-    </nav>
+          </span>
+        ) : (
+          link.label
+        )}
+      </a>
+    ))}
   </div>
 </header>
 
 <script>
   const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
   const mobileNav = document.getElementById('mobile-nav');
-  const hamburgerIcon = document.getElementById('hamburger-icon');
-  const closeIcon = document.getElementById('close-icon');
+  const line1 = document.getElementById('line-1');
+  const line2 = document.getElementById('line-2');
+  const line3 = document.getElementById('line-3');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  let isMenuOpen = false;
 
-  mobileMenuToggle?.addEventListener('click', () => {
-    mobileNav?.classList.toggle('hidden');
-    hamburgerIcon?.classList.toggle('hidden');
-    closeIcon?.classList.toggle('hidden');
-  });
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    
+    // Toggle Menu Visibility
+    if (isMenuOpen) {
+      mobileNav?.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      mobileNav?.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+      
+      // Animate Hamburger to X
+      line1?.classList.add('translate-y-2', 'rotate-45');
+      line2?.classList.add('opacity-0');
+      line3?.classList.add('-translate-y-2', '-rotate-45');
+    } else {
+      mobileNav?.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      mobileNav?.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      document.body.style.overflow = '';
+      
+      // Animate X back to Hamburger
+      line1?.classList.remove('translate-y-2', 'rotate-45');
+      line2?.classList.remove('opacity-0');
+      line3?.classList.remove('-translate-y-2', '-rotate-45');
+    }
+  }
+
+  mobileMenuToggle?.addEventListener('click', toggleMenu);
 
   mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
-      mobileNav?.classList.add('hidden');
-      hamburgerIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
+      if (isMenuOpen) toggleMenu();
     });
   });
 </script>
