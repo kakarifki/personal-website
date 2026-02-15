@@ -10,8 +10,6 @@ const highlights = [
   { icon: "fas fa-graduation-cap", text: "Bootcamp Graduate" },
   { icon: "fas fa-location-dot", text: "Based in Bekasi" },
 ];
-
-const fonts = ['Arial', 'Georgia', 'Courier New', 'Times New Roman', 'Verdana', 'Tahoma', 'Lucida Console'];
 ---
 
 <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden py-20 bg-slate-950">
@@ -22,9 +20,9 @@ const fonts = ['Arial', 'Georgia', 'Courier New', 'Times New Roman', 'Verdana', 
         Hello, I'm
       </p>
       
-      <!-- Name with Dynamic Font Effect -->
+      <!-- Name with Static Cool Font -->
       <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white">
-        <span id="dynamic-font" class="cursor-pointer select-none text-sky-500">Rifki</span>
+        <span class="text-sky-500 tracking-tight">Rifki</span>
         <span> Septiawan</span>
       </h1>
       
@@ -97,31 +95,3 @@ const fonts = ['Arial', 'Georgia', 'Courier New', 'Times New Roman', 'Verdana', 
     </a>
   </div>
 </section>
-
-<script define:vars={{ fonts }}>
-  let intervalId;
-  const element = document.getElementById('dynamic-font');
-  
-  function changeFontRandomly() {
-    if (element) {
-      const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
-      element.style.fontFamily = randomFont;
-    }
-  }
-  
-  function startAnimation() {
-    intervalId = setInterval(changeFontRandomly, 300);
-  }
-  
-  function stopAnimation() {
-    clearInterval(intervalId);
-    if (element) {
-      element.style.fontFamily = '"Exo 2", sans-serif';
-    }
-  }
-  
-  startAnimation();
-  
-  element?.addEventListener('mouseover', stopAnimation);
-  element?.addEventListener('mouseout', startAnimation);
-</script>
