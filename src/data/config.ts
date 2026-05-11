@@ -47,6 +47,18 @@ export const SITE_CONFIG = {
     title: "My Experience",
     items: [
       {
+        title: "Cluster Collection Support",
+        company: "PT Adira Dinamika Multi Finance Tbk.",
+        period: "September 2025 - Present",
+        responsibilities: [
+          "Managed collection administration for 2,000+ debtor accounts in the Cikarang area, providing daily support for 74 collectors and 10 AR Heads to ensure department targets were met.",
+          "Optimized daily operational procedures by serving data from the ad1Clar (ERP) system, significantly increasing the speed of payment receipt validation",
+          "Reconciled and processed an average of 40-100 payment receipts daily, maintaining 100% data integrity during high-volume end-of-month periods",
+          "Automated manual checklist processes using Advanced Excel (VLOOKUP, INDEX & MATCH), reducing daily administrative processing time for the collection team",
+          "Standardized digital filing systems for payment histories, improving document searchability and accessibility for 200+ historical records"
+        ]
+      },
+      {
         title: "General Affair & IT Support",
         company: "Jakmall.com",
         period: "Apr 2025 - Jul 2025",
@@ -94,62 +106,62 @@ export const SITE_CONFIG = {
         url: "https://kakarifki.web.id",
         slug: "personal-website"
       },
-      {
-        title: "Address Book",
-        image: "/images/white.jpg",
-        description: "Address book webapp for saving your contacts",
-        skills: ["HTML", "Tailwind CSS", "JavaScript"],
-        url: "https://contacts-book.rifkiseptiawan.com",
-        slug: "address-book"
-      },
-      {
-        title: "To-do-Least",
-        image: "/images/todoleast.png",
-        description: "A to-do-list app for organizing your tasks",
-        skills: ["HTML", "Tailwind CSS", "TypeScript", "React", "Vite"],
-        url: "https://to-do-least.rifkiseptiawan.com",
-        slug: "to-do-least"
-      },
+      // {
+      //   title: "Address Book",
+      //   image: "/images/white.jpg",
+      //   description: "Address book webapp for saving your contacts",
+      //   skills: ["HTML", "Tailwind CSS", "JavaScript"],
+      //   url: "https://contacts-book.rifkiseptiawan.com",
+      //   slug: "address-book"
+      // },
+      // {
+      //   title: "To-do-Least",
+      //   image: "/images/todoleast.png",
+      //   description: "A to-do-list app for organizing your tasks",
+      //   skills: ["HTML", "Tailwind CSS", "TypeScript", "React", "Vite"],
+      //   url: "https://to-do-least.rifkiseptiawan.com",
+      //   slug: "to-do-least"
+      // },
       {
         title: "Indonesian Culture REST API",
         image: "/images/restAPISwagger.png",
         description: "An API for fetching Indonesia heritage data with Swagger UI",
         skills: ["Hono", "OpenAPI", "Swagger UI", "Docker", "Zod", "PostgreSQL", "Prisma"],
-        url: "https://indonesia-heritage-api.rifkiseptiawan.com/api",
-        slug: "indonesia-heritage-api"
+        url: "https://api-budaya-indonesia.kakarifki.web.id/api",
+        slug: "api-budaya-indonesia"
       },
-      {
-        title: "JKT48 Fanbase Merch - Frontend",
-        image: "/images/fanbase-merch-fe.png",
-        description: "Frontend for JKT48 fanbase merch e-commerce platform",
-        skills: ["React", "Vite", "Tailwind CSS", "TypeScript", "React Query", "Auth"],
-        url: "https://jkt48-fanbase-merch.rifkiseptiawan.com/",
-        slug: "jkt48-fanbase-merch-fe"
-      },
-      {
-        title: "JKT48 Fanbase Merch - Backend",
-        image: "/images/white.jpg",
-        description: "Backend for JKT48 fanbase merch e-commerce platform",
-        skills: ["Hono", "Docker", "Zod", "PostgreSQL", "Prisma", "JWT Auth"],
-        url: "https://fanbase-merch-backend.onrender.com/",
-        slug: "jkt48-fanbase-merch-be"
-      },
-      {
-        title: "Videoboxd - Frontend",
-        image: "/images/videoboxd-fe.png",
-        description: "Review and rating platform for YouTube Videos",
-        skills: ["React Router", "Vite", "Tailwind CSS", "TypeScript", "Ky"],
-        url: "https://videoboxd.com/",
-        slug: "videoboxd-fe"
-      },
-      {
-        title: "Videoboxd - Backend",
-        image: "/images/videoboxd-be.png",
-        description: "Backend for Videoboxd with RestAPI and Scalar",
-        skills: ["Hono", "OpenAPI", "Scalar", "Docker", "Zod", "PostgreSQL", "Prisma", "JWT Auth"],
-        url: "https://api.videoboxd.com/",
-        slug: "videoboxd-be"
-      },
+      // {
+      //   title: "JKT48 Fanbase Merch - Frontend",
+      //   image: "/images/fanbase-merch-fe.png",
+      //   description: "Frontend for JKT48 fanbase merch e-commerce platform",
+      //   skills: ["React", "Vite", "Tailwind CSS", "TypeScript", "React Query", "Auth"],
+      //   url: "https://jkt48-fanbase-merch.rifkiseptiawan.com/",
+      //   slug: "jkt48-fanbase-merch-fe"
+      // },
+      // {
+      //   title: "JKT48 Fanbase Merch - Backend",
+      //   image: "/images/white.jpg",
+      //   description: "Backend for JKT48 fanbase merch e-commerce platform",
+      //   skills: ["Hono", "Docker", "Zod", "PostgreSQL", "Prisma", "JWT Auth"],
+      //   url: "https://fanbase-merch-backend.onrender.com/",
+      //   slug: "jkt48-fanbase-merch-be"
+      // },
+      // {
+      //   title: "Videoboxd - Frontend",
+      //   image: "/images/videoboxd-fe.png",
+      //   description: "Review and rating platform for YouTube Videos",
+      //   skills: ["React Router", "Vite", "Tailwind CSS", "TypeScript", "Ky"],
+      //   url: "https://videoboxd.com/",
+      //   slug: "videoboxd-fe"
+      // },
+      // {
+      //   title: "Videoboxd - Backend",
+      //   image: "/images/videoboxd-be.png",
+      //   description: "Backend for Videoboxd with RestAPI and Scalar",
+      //   skills: ["Hono", "OpenAPI", "Scalar", "Docker", "Zod", "PostgreSQL", "Prisma", "JWT Auth"],
+      //   url: "https://api.videoboxd.com/",
+      //   slug: "videoboxd-be"
+      // },
       {
         title: "Tanti's Portfolio Website",
         image: "/images/tanti.png",
@@ -157,6 +169,14 @@ export const SITE_CONFIG = {
         skills: ["NextJS", "Tailwind CSS", "TypeScript", "Auth", "Dashboard"],
         url: "https://tantipujian.vercel.app",
         slug: "tanti-portfolio"
+      },
+      {
+        title: "Algifari's Portfolio Website",
+        image: "/images/Alghi-web.png",
+        description: "Personal Website for Algifari, a Copywriter",
+        skills: ["React", "Vite", "Tailwind CSS", "TypeScript"],
+        url: "https://alghi.netlify.app/",
+        slug: "algifari-portfolio"
       }
     ]
   }
