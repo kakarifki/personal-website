@@ -1,15 +1,7 @@
 ---
-const socialLinks = [
-  { href: "https://github.com/kakarifki", icon: "fab fa-github", label: "GitHub" },
-  { href: "https://www.linkedin.com/in/muhammadrifkiseptiawan11", icon: "fab fa-linkedin", label: "LinkedIn" },
-  { href: "https://www.instagram.com/rifkiseptiawan", icon: "fab fa-instagram", label: "Instagram" },
-];
-
-const highlights = [
-  { icon: "fas fa-code", text: "Software Engineer" },
-  { icon: "fas fa-graduation-cap", text: "Bootcamp Graduate" },
-  { icon: "fas fa-location-dot", text: "Based in Bekasi" },
-];
+import { SITE_CONFIG } from '../data/config';
+const { socialLinks, heroAbout } = SITE_CONFIG;
+const { highlights } = heroAbout;
 ---
 
 <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden py-20 bg-slate-950">
@@ -17,13 +9,13 @@ const highlights = [
     <div class="text-center max-w-4xl mx-auto">
       <!-- Greeting -->
       <p class="text-sky-500 text-lg md:text-xl font-medium mb-4 tracking-wider uppercase">
-        Hello, I'm
+        {heroAbout.greeting}
       </p>
       
       <!-- Name with Static Cool Font -->
       <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white">
-        <span class="text-sky-500 tracking-tight">Rifki</span>
-        <span> Septiawan</span>
+        <span class="text-sky-500 tracking-tight">{heroAbout.firstName}</span>
+        <span> {heroAbout.lastName}</span>
       </h1>
       
       <!-- Highlights (Integrated from About) -->
@@ -38,18 +30,9 @@ const highlights = [
 
       <!-- Bio (Merged Content) -->
       <div id="about" class="bg-slate-900 rounded-2xl p-8 mb-10 text-gray-300 leading-relaxed max-w-3xl mx-auto border border-slate-800 scroll-mt-32">
-         <p class="text-lg md:text-xl mb-4 font-medium text-white">
-            From <span class="text-sky-500">curiosity</span> to <span class="text-sky-500">code</span>.
-         </p>
-         <p class="mb-4">
-            Started taking apart computers in middle school, now I build digital solutions.
-            Graduated from <span class="text-sky-500 font-semibold">Bearmentor.com</span> bootcamp, 
-            crafting digital experiences with passion and precision.
-         </p>
-         <p class="text-gray-400 text-sm md:text-base">
-            I believe in continuous learning and building solutions that matter.
-            Ready to build and innovate.
-         </p>
+         <p class="text-lg md:text-xl mb-4 font-medium text-white" set:html={heroAbout.bioTitle}></p>
+         <p class="mb-4 whitespace-pre-line" set:html={heroAbout.bioParagraph1}></p>
+         <p class="text-gray-400 text-sm md:text-base whitespace-pre-line" set:html={heroAbout.bioParagraph2}></p>
       </div>
 
       <!-- CTA Buttons -->
@@ -62,7 +45,7 @@ const highlights = [
           <span class="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
         </a>
         <a 
-          href="mailto:rifkim91@gmail.com" 
+          href={`mailto:${SITE_CONFIG.email}`} 
           class="px-8 py-4 bg-transparent border border-slate-700 text-white font-semibold rounded-full hover:bg-slate-800 transition-all duration-300 hover:-translate-y-1"
         >
           Get In Touch

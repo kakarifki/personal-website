@@ -1,12 +1,6 @@
 ---
-const currentYear = new Date().getFullYear();
-
-const socialLinks = [
-  { href: "https://github.com/kakarifki", icon: "fab fa-github", label: "GitHub" },
-  { href: "https://www.linkedin.com/in/muhammadrifkiseptiawan11", icon: "fab fa-linkedin", label: "LinkedIn" },
-  { href: "https://www.instagram.com/rifkiseptiawan", icon: "fab fa-instagram", label: "Instagram" },
-  { href: "mailto:rifkim91@gmail.com", icon: "fas fa-envelope", label: "Email" },
-];
+import { SITE_CONFIG } from '../data/config';
+const socialLinks = SITE_CONFIG.socialLinks;
 ---
 
 <footer class="py-12 bg-slate-950 border-t border-slate-800">
@@ -15,9 +9,9 @@ const socialLinks = [
       <!-- Logo -->
       <div class="text-center md:text-left">
         <a href="#home" class="text-2xl font-bold text-white hover:text-sky-500 transition-colors">
-          Rifki Septiawan
+          {SITE_CONFIG.author}
         </a>
-        <p class="text-gray-500 text-sm mt-1">Software Engineer</p>
+        <p class="text-gray-500 text-sm mt-1">{SITE_CONFIG.role}</p>
       </div>
 
       <!-- Social Links -->
@@ -37,7 +31,7 @@ const socialLinks = [
 
       <!-- Copyright -->
       <p class="text-gray-500 text-sm">
-        &copy; {currentYear} KakaRifki. All rights reserved.
+        &copy; {SITE_CONFIG.copyrightYear} {SITE_CONFIG.author}. All rights reserved.
       </p>
     </div>
   </div>
